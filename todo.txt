@@ -1,0 +1,17 @@
+1. Grading
+	manage grades
+	calculate averages
+	set reminders to learn for certain subjects
+
+2. Exams
+	List with all examinations
+	exam consists of subject, topic and date
+	set automatic reminders for exams
+
+3. Notes
+	Notes for each subject / topic
+
+
+Miscellaneous
+save data to json -> filewriter / filereader with singletonpattern
+different panes with factorypattern
