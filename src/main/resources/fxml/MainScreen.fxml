@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="773.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ch.bbw.Assess.FXMLController" />
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="883.0" style="-fx-background-color: #292F53;" styleClass="mainPane" stylesheets="@../styles/Styles.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ch.bbw.Assess.FXMLController">
+   <children>
+      <ImageView fitHeight="73.0" fitWidth="388.0" layoutX="25.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/assess.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="142.0" layoutY="207.0" prefHeight="580.0" prefWidth="600.0" stylesheets="@../styles/Styles.css">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="600.0" style="-fx-background-color: #3E4882;" stylesheets="@../styles/Styles.css">
+               <children>
+                  <Button layoutX="50.0" layoutY="26.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles/Styles.css" text="Button" />
+                  <Button layoutX="338.0" layoutY="26.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles/Styles.css" text="Button" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
