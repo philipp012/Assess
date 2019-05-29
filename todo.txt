@@ -15,3 +15,6 @@
 Miscellaneous
 save data to json -> filewriter / filereader with singletonpattern
 different panes with factorypattern
+
+
+Backgroundcolor: #292F53
