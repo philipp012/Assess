@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbw.Assess.FXMLController">
+    <ImageView fitHeight="109.0" fitWidth="200.0" layoutX="21.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../img/assess1.png" />
+    </ImageView>
+    <ScrollPane layoutX="67.0" layoutY="94.0" prefHeight="508.0" prefWidth="616.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+    </ScrollPane>
+    <Label fx:id="copyRightLabel" layoutX="27.0" layoutY="668.0" prefHeight="17.0" prefWidth="140.0" text="© Sancacanc / Kiss, 2019" />
+</AnchorPane>
