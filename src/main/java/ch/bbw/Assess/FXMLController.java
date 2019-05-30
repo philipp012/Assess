@@ -13,6 +13,7 @@ public class FXMLController implements Initializable {
 
     public ScrollPane scrollPane;
     public GridPane gridPane;
+    private int counter = 0;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -27,6 +28,12 @@ public class FXMLController implements Initializable {
     // Add subject
     public void addSubject() {
         Button button = new Button();
-        gridPane.add(button, 0, 0);
+
+        if ((counter % 2) == 0) {
+            gridPane.add(button, 0, gridPane.getChildren().size());
+        } else {
+            gridPane.add(button, 1, gridPane.getChildren().size()-1);
+        }
+        counter++;
     }
 }

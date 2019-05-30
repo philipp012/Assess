@@ -20,7 +20,7 @@
     <Button fx:id="add" layoutX="637.0" layoutY="630.0" mnemonicParsing="false" onAction="#addSubject" text="+" />
    <ScrollPane fx:id="scrollPane" layoutX="139.0" layoutY="316.0" prefHeight="269.0" prefWidth="490.0">
       <content>
-         <GridPane fx:id="gridPane" prefHeight="257.0" prefWidth="477.0">
+         <GridPane fx:id="gridPane" prefHeight="259.0" prefWidth="478.0">
            <columnConstraints>
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
