@@ -4,7 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
+import java.util.Objects;
 
 
 public class MainApp extends Application {
@@ -21,6 +24,7 @@ public class MainApp extends Application {
         stage.setWidth(750);
         stage.setHeight(750);
         stage.setResizable(false);
+        stage.getIcons().add(new Image(Objects.requireNonNull(ClassLoader.getSystemResourceAsStream("img/icon.png"))));
         stage.show();
     }
     
