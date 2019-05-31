@@ -18,9 +18,9 @@
     <Button fx:id="gradesBtn" layoutX="150.0" layoutY="150.0" mnemonicParsing="false" text="Grades" />
     <Button fx:id="examsBtn" layoutX="400.0" layoutY="150.0" mnemonicParsing="false" text="Exams" />
     <Button fx:id="add" layoutX="637.0" layoutY="630.0" mnemonicParsing="false" onAction="#addSubject" text="+" />
-   <ScrollPane fx:id="scrollPane" layoutX="139.0" layoutY="316.0" prefHeight="269.0" prefWidth="490.0">
+   <ScrollPane fx:id="scrollPane" layoutX="123.0" layoutY="316.0" prefHeight="269.0" prefWidth="506.0">
       <content>
-         <GridPane fx:id="gridPane" prefHeight="259.0" prefWidth="478.0">
+         <GridPane fx:id="gridPane" prefHeight="271.0" prefWidth="533.0">
            <columnConstraints>
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
