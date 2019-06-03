@@ -16,16 +16,6 @@
     -fx-pref-width: 150px;
 }
 
-.text-field {
-    -fx-background-color: -fx-text-box-border, -fx-background ;
-    -fx-background-insets: 0, 0 0 1 0 ;
-    -fx-background-radius: 0 ;
-}
-.text-field:focused {
-    -fx-background-color: -fx-focus-color, -fx-background ;
-}
-
-/*
 #tfSubjectName {
     -fx-background-color: #1e88e5;
     -fx-text-fill: white;
@@ -33,7 +23,6 @@
     -fx-background: #1e88e5;
     -fx-focus-color: #1e88e5;
 }
-*/
 
 #lbTitle {
     -fx-text-fill: white;
