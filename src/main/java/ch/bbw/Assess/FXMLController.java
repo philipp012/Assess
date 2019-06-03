@@ -1,19 +1,28 @@
 package ch.bbw.Assess;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 public class FXMLController implements Initializable {
 
     public ScrollPane scrollPane;
     public GridPane gridPane;
-    private int counter = 0;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -27,13 +36,17 @@ public class FXMLController implements Initializable {
 
     // Add subject
     public void addSubject() {
-        Button button = new Button();
-
-        if ((counter % 2) == 0) {
-            gridPane.add(button, 0, gridPane.getChildren().size());
-        } else {
-            gridPane.add(button, 1, gridPane.getChildren().size()-1);
+        try {
+            Parent addSubject = FXMLLoader.load(getClass().getResource("/fxml/AddSubject.fxml"));
+            Stage addSubjectStage = new Stage();
+            addSubjectStage.setTitle("Assess - Add Subject");
+            addSubjectStage.setScene(new Scene(addSubject, 450, 450));
+            addSubjectStage.getIcons().add(new Image(Objects.requireNonNull(ClassLoader.getSystemResourceAsStream("img/icon.png"))));
+            addSubjectStage.setResizable(false);
+            addSubjectStage.show();
         }
-        counter++;
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
