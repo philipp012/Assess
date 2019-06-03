@@ -14,7 +14,7 @@
     <ImageView fitHeight="109.0" fitWidth="200.0" layoutX="21.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@../img/assess1.png" />
     </ImageView>
-    <Label fx:id="copyRightLabel" layoutX="27.0" layoutY="668.0" prefHeight="17.0" prefWidth="140.0" text="© 2019 Sancacanc / Kiss" />
+    <Label fx:id="copyRightLabel" layoutX="27.0" layoutY="668.0" prefHeight="17.0" prefWidth="165.0" text="© 2019 Sancacanc / Kiss" />
     <Button fx:id="gradesBtn" layoutX="150.0" layoutY="150.0" mnemonicParsing="false" text="Grades" />
     <Button fx:id="examsBtn" layoutX="400.0" layoutY="150.0" mnemonicParsing="false" text="Exams" />
     <Button fx:id="add" layoutX="637.0" layoutY="630.0" mnemonicParsing="false" onAction="#addSubject" text="+" />
