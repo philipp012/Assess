@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-@charset "ISO-8859-1";
-=======
+
 * {
     -fx-background-color: #292F53;
 }
@@ -32,9 +30,8 @@
     -fx-text-fill: #66bb6a;
     -fx-font-size: 30;
     -fx-font-weight: bold;
-    -fx-max-height: 30px;
-    -fx-max-width: 30px;
-    -fx-background-radius: 5em;
+    -fx-max-height: 10px;
+    -fx-max-width: 10px;
 }
 
 .button {
@@ -45,6 +42,3 @@
     -fx-pref-width: 200px;
     -fx-background-radius: 10;
 }
-
-
->>>>>>> adding_functionality
