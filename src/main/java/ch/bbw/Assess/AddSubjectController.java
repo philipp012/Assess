@@ -1,34 +1,38 @@
 package ch.bbw.Assess;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class AddSubjectController {
 
     public TextField tfSubjectName;
-    private GridPane gridPane;
+    private List<Subject> subjectList = new ArrayList<>();
 
-    private int counter = 0;
-
-    void setGridpane(GridPane gridPane) {
-        this.gridPane = gridPane;
+    void setSubjectList(List<Subject> subjectList) {
+        this.subjectList = subjectList;
     }
 
-
     public void confirmAddSubject(ActionEvent event) {
-
-        Button button = new Button();
-
-        if ((counter % 2) == 0) {
-            gridPane.add(button, 0, gridPane.getChildren().size());
-        } else {
-            gridPane.add(button, 1, gridPane.getChildren().size()-1);
+        if (!tfSubjectName.getText().isEmpty()) {
+            Subject subject = new Subject();
+            subject.setName(tfSubjectName.getText());
+            subjectList.add(subject);
+            System.out.println(subject.getName());
+            // return subjects to Dashboard
+            ((Node) (event.getSource())).getScene().getWindow().hide();
         }
-        counter++;
-        ((Node) (event.getSource())).getScene().getWindow().hide();
     }
 
     public void discard(ActionEvent event) {

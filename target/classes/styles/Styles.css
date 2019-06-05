@@ -1,6 +1,7 @@
 
 * {
     -fx-background-color: #292F53;
+    -fx-opacity: 50%;
 }
 
 #copyRightLabel {

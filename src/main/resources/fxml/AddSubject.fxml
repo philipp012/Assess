@@ -13,6 +13,6 @@
     </ImageView>
     <Button fx:id="add" layoutX="265.0" layoutY="327.0" mnemonicParsing="false" onAction="#confirmAddSubject" text="Add" />
     <Button fx:id="discard" layoutX="60.0" layoutY="327.0" mnemonicParsing="false" onAction="#discard" text="Discard" />
-    <TextField fx:id="tfSubjectName" layoutX="127.0" layoutY="182.0" prefHeight="26.0" prefWidth="197.0" promptText="Name" />
+    <TextField fx:id="tfSubjectName" layoutX="127.0" layoutY="182.0" prefHeight="26.0" prefWidth="197.0" promptText="Name"/>
     <Label fx:id="lbTitle" layoutX="157.0" layoutY="28.0" text="Add Subject" />
 </AnchorPane>

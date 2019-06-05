@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
-
 public class MainApp extends Application {
 
     @Override

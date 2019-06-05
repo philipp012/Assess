@@ -5,12 +5,15 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -18,6 +21,13 @@ public class DashboardController implements Initializable {
 
     public ScrollPane scrollPane;
     public GridPane gridPane;
+    private int counter = 0;
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
+    }
+
+    private List<Subject> subjects = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -26,7 +36,20 @@ public class DashboardController implements Initializable {
         gridPane.setPadding(new Insets(25));
         gridPane.setHgap(25);
         gridPane.setVgap(25);
+    }
 
+    public void refreshDashboard() {
+        for (Subject subject : subjects) {
+            Button button = new Button();
+            button.setText(subject.getName());
+
+            if ((counter % 2) == 0) {
+                gridPane.add(button, 0, gridPane.getChildren().size());
+            } else {
+                gridPane.add(button, 1, gridPane.getChildren().size() - 1);
+            }
+            counter++;
+        }
     }
 
     // Add subject
@@ -35,7 +58,7 @@ public class DashboardController implements Initializable {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/AddSubject.fxml"));
             Parent addSubject = fxmlLoader.load();
             AddSubjectController addSubjectController = fxmlLoader.getController();
-            addSubjectController.setGridpane(gridPane);
+            addSubjectController.setSubjectList(subjects);
             Scene scene1 = new Scene(addSubject, 450, 450);
             Stage addSubjectStage = new Stage();
             addSubjectStage.setTitle("Assess - Add Subject");
