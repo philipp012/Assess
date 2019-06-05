@@ -1,5 +1,6 @@
 package ch.bbw.Assess;
 
+import ch.bbw.Assess.DTO.Subject;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -15,20 +16,24 @@ public class AddSubjectController {
 
     void setGridpane(GridPane gridPane) {
         this.gridPane = gridPane;
-    }gita
+    }
 
 
     public void confirmAddSubject(ActionEvent event) {
+        if (!tfSubjectName.getText().isEmpty()) {
+            Button button = new Button();
 
-        Button button = new Button();
+            if ((counter % 2) == 0) {
+                gridPane.add(button, 0, gridPane.getChildren().size());
+            } else {
+                gridPane.add(button, 1, gridPane.getChildren().size() - 1);
+            }
+            counter++;
+            Subject subject = new Subject();
+            subject.setName(tfSubjectName.getText());
 
-        if ((counter % 2) == 0) {
-            gridPane.add(button, 0, gridPane.getChildren().size());
-        } else {
-            gridPane.add(button, 1, gridPane.getChildren().size()-1);
+            ((Node) (event.getSource())).getScene().getWindow().hide();
         }
-        counter++;
-        ((Node) (event.getSource())).getScene().getWindow().hide();
     }
 
     public void discard(ActionEvent event) {

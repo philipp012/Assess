@@ -1,5 +1,6 @@
 package ch.bbw.Assess;
 
+import ch.bbw.Assess.DTO.Subject;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -11,6 +12,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -18,6 +21,8 @@ public class DashboardController implements Initializable {
 
     public ScrollPane scrollPane;
     public GridPane gridPane;
+
+    private List<Subject> subjects = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
