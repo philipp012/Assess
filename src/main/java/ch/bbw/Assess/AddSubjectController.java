@@ -15,7 +15,7 @@ public class AddSubjectController {
 
     void setGridpane(GridPane gridPane) {
         this.gridPane = gridPane;
-    }gita
+    }
 
 
     public void confirmAddSubject(ActionEvent event) {
