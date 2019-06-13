@@ -2,33 +2,25 @@ package ch.bbw.Assess;
 
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 
 public class AddSubjectController {
 
     public TextField tfSubjectName;
-    private GridPane gridPane;
+    private DashboardController parentController;
 
-    private int counter = 0;
-
-    void setGridpane(GridPane gridPane) {
-        this.gridPane = gridPane;
+    void initialize(DashboardController parentController) {
+        this.parentController = parentController;
     }
 
-
     public void confirmAddSubject(ActionEvent event) {
-
-        Button button = new Button();
-
-        if ((counter % 2) == 0) {
-            gridPane.add(button, 0, gridPane.getChildren().size());
-        } else {
-            gridPane.add(button, 1, gridPane.getChildren().size()-1);
+        if (!tfSubjectName.getText().trim().isEmpty()) {
+            Subject subject = new Subject();
+            System.out.println(tfSubjectName.getText().trim());
+            subject.setName(tfSubjectName.getText().trim());
+            parentController.addSubject(subject);
+            ((Node) (event.getSource())).getScene().getWindow().hide();
         }
-        counter++;
-        ((Node) (event.getSource())).getScene().getWindow().hide();
     }
 
     public void discard(ActionEvent event) {
