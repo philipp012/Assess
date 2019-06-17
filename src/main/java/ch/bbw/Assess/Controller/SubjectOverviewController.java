@@ -1,5 +1,6 @@
-package ch.bbw.Assess;
+package ch.bbw.Assess.Controller;
 
+import ch.bbw.Assess.Models.Subject;
 import javafx.scene.control.Label;
 
 public class SubjectOverviewController {

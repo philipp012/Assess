@@ -1,4 +1,4 @@
-package ch.bbw.Assess;
+package ch.bbw.Assess.Models;
 
 public class Subject {
     private String name;

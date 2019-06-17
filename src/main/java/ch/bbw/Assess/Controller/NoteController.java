@@ -1,5 +1,6 @@
-package ch.bbw.Assess;
+package ch.bbw.Assess.Controller;
 
+import ch.bbw.Assess.Models.Subject;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;

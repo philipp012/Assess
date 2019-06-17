@@ -1,4 +1,4 @@
-package ch.bbw.Assess;
+package ch.bbw.Assess.Models;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

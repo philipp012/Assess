@@ -1,5 +1,6 @@
-package ch.bbw.Assess;
+package ch.bbw.Assess.Controller;
 
+import ch.bbw.Assess.Models.Subject;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -38,13 +39,13 @@ public class DashboardController implements Initializable {
     // Add subject
     public void loadSubjectDialogue() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/AddSubject.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/fxml/AddSubject.fxml"));
             Parent addSubject = fxmlLoader.load();
             AddSubjectController addSubjectController = fxmlLoader.getController();
             Scene newSubjectScene = new Scene(addSubject, 450, 450);
             Stage addSubjectStage = new Stage();
             addSubjectStage.setTitle("Add Subject");
-            addSubjectStage.getIcons().add(new Image(Objects.requireNonNull(ClassLoader.getSystemResourceAsStream("img/icon.png"))));
+            addSubjectStage.getIcons().add(new Image(Objects.requireNonNull(ClassLoader.getSystemResourceAsStream("Views/img/icon.png"))));
             addSubjectStage.setResizable(false);
             addSubjectStage.setScene(newSubjectScene);
             addSubjectController.initialize(this);
@@ -63,14 +64,14 @@ public class DashboardController implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/SubjectOverview.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/fxml/SubjectOverview.fxml"));
                     Parent addSubject = fxmlLoader.load();
                     SubjectOverviewController subjectOverviewController = fxmlLoader.getController();
                     subjectOverviewController.initialize(DashboardController.this, subject);
                     Scene subjectOverviewScene = new Scene(addSubject, 800, 600);
                     Stage subjectOverviewStage = new Stage();
                     subjectOverviewStage.setTitle(subject.getName());
-                    subjectOverviewStage.getIcons().add(new Image(Objects.requireNonNull(ClassLoader.getSystemResourceAsStream("img/icon.png"))));
+                    subjectOverviewStage.getIcons().add(new Image(Objects.requireNonNull(ClassLoader.getSystemResourceAsStream("Views/img/icon.png"))));
                     subjectOverviewStage.setResizable(true);
                     subjectOverviewStage.setScene(subjectOverviewScene);
                     subjectOverviewStage.show();
