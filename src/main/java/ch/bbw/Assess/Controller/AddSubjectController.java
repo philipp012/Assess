@@ -16,24 +16,34 @@ public class AddSubjectController {
     }
 
     public void confirmAddSubject(ActionEvent event) {
-        for (Subject subject : parentController.getSubjects()) {
-            if (!subject.getName().equals(tfSubjectName.getText().trim())) {
-                if (!tfSubjectName.getText().trim().isEmpty()) {
-                    Subject newSubject = new Subject();
-                    newSubject.setName(tfSubjectName.getText().trim());
-                    parentController.addSubject(newSubject);
-                    ((Node) (event.getSource())).getScene().getWindow().hide();
-                }
-            } else {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Error");
-                alert.setHeaderText("Duplicate Subject name");
-                alert.setContentText("There is already a subject called '" + subject.getName() + "'");
+        if (!parentController.getSubjects().isEmpty()) {
+            for (Subject subject : parentController.getSubjects()) {
+                if (!subject.getName().equals(tfSubjectName.getText().trim())) {
+                    if (!tfSubjectName.getText().trim().isEmpty()) {
+                        Subject newSubject = new Subject();
+                        newSubject.setName(tfSubjectName.getText().trim());
+                        parentController.addSubject(newSubject);
+                        ((Node) (event.getSource())).getScene().getWindow().hide();
+                    }
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Duplicate Subject name");
+                    alert.setContentText("There is already a subject called '" + subject.getName() + "'");
 
-                alert.showAndWait();
+                    alert.showAndWait();
+                }
+            }
+        } else {
+            if (!tfSubjectName.getText().trim().isEmpty()) {
+                Subject newSubject = new Subject();
+                newSubject.setName(tfSubjectName.getText().trim());
+                parentController.addSubject(newSubject);
+                ((Node) (event.getSource())).getScene().getWindow().hide();
             }
         }
     }
+
 
     public void discard(ActionEvent event) {
         ((Node) (event.getSource())).getScene().getWindow().hide();
