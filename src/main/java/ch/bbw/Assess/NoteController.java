@@ -1,28 +1,35 @@
 package ch.bbw.Assess;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
+import javafx.scene.web.HTMLEditor;
 
 public class NoteController {
 
-    public TextField tfSubjectName;
-    private DashboardController parentController;
+	@FXML
+	public HTMLEditor htmlEditor;
 
-    void initialize(DashboardController parentController) {
-        this.parentController = parentController;
-    }
+	@FXML
+	private TextField subjectText;
 
-    public void confirmAddSubject(ActionEvent event) {
-        if (!tfSubjectName.getText().trim().isEmpty()) {
-            Subject subject = new Subject();
-            subject.setName(tfSubjectName.getText().trim());
-            parentController.addSubject(subject);
-            ((Node) (event.getSource())).getScene().getWindow().hide();
-        }
-    }
+	@FXML
+	private TextField titleText;
 
-    public void discard(ActionEvent event) {
-        ((Node) (event.getSource())).getScene().getWindow().hide();
-    }
+	void initialize(DashboardController parentController) {
+
+	}
+
+	public void confirmAddSubject(ActionEvent event) {
+		if (!htmlEditor.getHtmlText().trim().isEmpty()) {
+			Note note = new Note(0, subjectText.getText(), titleText.getText(), htmlEditor.getHtmlText());
+			
+			((Node) (event.getSource())).getScene().getWindow().hide();
+		}
+	}
+
+	public void discard(ActionEvent event) {
+		((Node) (event.getSource())).getScene().getWindow().hide();
+	}
 }
