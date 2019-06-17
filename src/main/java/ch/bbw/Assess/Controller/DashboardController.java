@@ -27,6 +27,14 @@ public class DashboardController implements Initializable {
     private int counter = 0;
     List<Subject> subjects = new ArrayList<>();
 
+    public List<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);

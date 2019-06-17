@@ -15,6 +15,7 @@ public class AddSubjectController {
     }
 
     public void confirmAddSubject(ActionEvent event) {
+        for (Subject subject : parentController.getSubjects())
         if (!tfSubjectName.getText().trim().isEmpty()) {
             Subject subject = new Subject();
             subject.setName(tfSubjectName.getText().trim());
