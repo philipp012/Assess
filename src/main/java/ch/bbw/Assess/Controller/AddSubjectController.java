@@ -3,6 +3,7 @@ package ch.bbw.Assess.Controller;
 import ch.bbw.Assess.Models.Subject;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 public class AddSubjectController {
@@ -23,6 +24,13 @@ public class AddSubjectController {
                     parentController.addSubject(newSubject);
                     ((Node) (event.getSource())).getScene().getWindow().hide();
                 }
+            } else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Error");
+                alert.setHeaderText("Duplicate Subject name");
+                alert.setContentText("There is already a subject called '" + subject.getName() + "'");
+
+                alert.showAndWait();
             }
         }
     }
