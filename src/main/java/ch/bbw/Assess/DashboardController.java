@@ -87,4 +87,9 @@ public class DashboardController implements Initializable {
         counter++;
 
     }
+
+	public List<Subject> getSubjects() {
+		return subjects;
+	}
+
 }
