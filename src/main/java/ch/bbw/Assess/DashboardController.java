@@ -66,13 +66,13 @@ public class DashboardController implements Initializable {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/SubjectOverview.fxml"));
                     Parent addSubject = fxmlLoader.load();
                     SubjectOverviewController subjectOverviewController = fxmlLoader.getController();
-                    Scene newSubjectScene = new Scene(addSubject, 800, 600);
+                    subjectOverviewController.initialize(DashboardController.this, subject);
+                    Scene subjectOverviewScene = new Scene(addSubject, 800, 600);
                     Stage subjectOverviewStage = new Stage();
                     subjectOverviewStage.setTitle(subject.getName());
                     subjectOverviewStage.getIcons().add(new Image(Objects.requireNonNull(ClassLoader.getSystemResourceAsStream("img/icon.png"))));
                     subjectOverviewStage.setResizable(true);
-                    subjectOverviewStage.setScene(newSubjectScene);
-                    subjectOverviewController.initialize(DashboardController.this);
+                    subjectOverviewStage.setScene(subjectOverviewScene);
                     subjectOverviewStage.show();
                 } catch (Exception e) {
                     e.printStackTrace();
