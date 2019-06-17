@@ -14,8 +14,7 @@
 
 Miscellaneous
 save data to json -> filewriter / filereader with singletonpattern
-observerpattern for updating when edited in another instance
-MVC-Pattern
+different panes with factorypattern
 
 
 Backgroundcolor: #292F53
