@@ -15,12 +15,15 @@ public class AddSubjectController {
     }
 
     public void confirmAddSubject(ActionEvent event) {
-        for (Subject subject : parentController.getSubjects())
-        if (!tfSubjectName.getText().trim().isEmpty()) {
-            Subject subject = new Subject();
-            subject.setName(tfSubjectName.getText().trim());
-            parentController.addSubject(subject);
-            ((Node) (event.getSource())).getScene().getWindow().hide();
+        for (Subject subject : parentController.getSubjects()) {
+            if (!subject.getName().equals(tfSubjectName.getText().trim())) {
+                if (!tfSubjectName.getText().trim().isEmpty()) {
+                    Subject newSubject = new Subject();
+                    newSubject.setName(tfSubjectName.getText().trim());
+                    parentController.addSubject(newSubject);
+                    ((Node) (event.getSource())).getScene().getWindow().hide();
+                }
+            }
         }
     }
 
