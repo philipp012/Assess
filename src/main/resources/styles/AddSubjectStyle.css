@@ -17,11 +17,8 @@
 }
 
 #tfSubjectName {
-    -fx-background-color: #1e88e5;
     -fx-text-fill: white;
     -fx-font-size: 15;
-    -fx-background: #1e88e5;
-    -fx-focus-color: #1e88e5;
 }
 
 #lbTitle {

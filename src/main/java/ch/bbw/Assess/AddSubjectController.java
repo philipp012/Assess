@@ -16,7 +16,6 @@ public class AddSubjectController {
     public void confirmAddSubject(ActionEvent event) {
         if (!tfSubjectName.getText().trim().isEmpty()) {
             Subject subject = new Subject();
-            System.out.println(tfSubjectName.getText().trim());
             subject.setName(tfSubjectName.getText().trim());
             parentController.addSubject(subject);
             ((Node) (event.getSource())).getScene().getWindow().hide();
