@@ -28,7 +28,7 @@ public class NoteController {
 		this.parentController = parentController;
 	}
 
-	public void confirmAddSubject(ActionEvent event) {
+	public void saveNote(ActionEvent event) {
 		if (!htmlEditor.getHtmlText().trim().isEmpty() && !subjectText.getText().trim().isEmpty()
 				&& !titleText.getText().trim().isEmpty()) {
 			
@@ -46,7 +46,7 @@ public class NoteController {
 		}
 	}
 
-	public void discard(ActionEvent event) {
+	public void cancel(ActionEvent event) {
 		((Node) (event.getSource())).getScene().getWindow().hide();
 	}
 }
