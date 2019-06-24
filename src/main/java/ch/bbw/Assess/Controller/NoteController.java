@@ -36,7 +36,7 @@ public class NoteController {
 			
 			Note note = new Note(notes.size() + 1, subjectText.getText(), titleText.getText(), htmlEditor.getHtmlText());
 
-			//TODO: Subject Namen dürfen nicht mehrmals vorkommen
+			
 			for (Subject subject : parentController.getSubjects()) {
 				if (subject.getName().toLowerCase().equals(this.subjectText.getText().toLowerCase())) {
 					subject.addNote(note);
