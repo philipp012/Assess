@@ -16,7 +16,7 @@ import javafx.scene.web.HTMLEditor;
 public class NoteController {
 
 	@FXML
-	public HTMLEditor htmlEditor;
+	private HTMLEditor htmlEditor;
 
 	@FXML
 	private TextField subjectText;
@@ -26,21 +26,25 @@ public class NoteController {
 	
 	private DashboardController parentController;
 	
-	Note note;
+	private Note note;
 	
-	List<Note> notes = new ArrayList<>();
+	private SubjectOverviewController subjectOverviewController;
+	
+	List<Note> notes;
 
-	void initialize(DashboardController parentController, Note note) {
+	void initialize(SubjectOverviewController subjectOverviewController, DashboardController parentController, Note note, List<Note> notes) {
 		this.parentController = parentController;
 		this.note = note;
+		this.subjectOverviewController = subjectOverviewController;
+		this.notes = notes;
 	}
 
 	public void saveNote(ActionEvent event) {
+				
 		if (!htmlEditor.getHtmlText().trim().isEmpty() && !subjectText.getText().trim().isEmpty()
 				&& !titleText.getText().trim().isEmpty()) {
 			
-			Note note = new Note(notes.size() + 1, subjectText.getText(), titleText.getText(), htmlEditor.getHtmlText());
-
+			note = new Note(notes.size() + 1, subjectText.getText(), titleText.getText(), htmlEditor.getHtmlText());
 			
 			for (Subject subject : parentController.getSubjects()) {
 				if (subject.getName().toLowerCase().equals(this.subjectText.getText().toLowerCase())) {
@@ -48,6 +52,8 @@ public class NoteController {
 				}
 			}
 			notes.add(note);
+			
+			subjectOverviewController.addNote(note);
 
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		}

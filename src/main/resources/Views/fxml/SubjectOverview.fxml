@@ -18,9 +18,9 @@
           </image>
        </ImageView>
        <Label fx:id="lbTitle" layoutX="157.0" layoutY="28.0" text="" />
-      <ScrollPane fx:id="scrollPane" layoutX="29.0" layoutY="300.0" prefHeight="261.0" prefWidth="430.0">
+      <ScrollPane fx:id="scrollPaneNotes" layoutX="29.0" layoutY="300.0" prefHeight="261.0" prefWidth="430.0">
          <content>
-            <GridPane fx:id="gridPane" prefHeight="260.0" prefWidth="431.0">
+            <GridPane fx:id="gridPaneNotes" prefHeight="260.0" prefWidth="431.0">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
