@@ -11,6 +11,16 @@ public class Note {
 	private String text;
 	private Date date;
 
+	public Note() {
+		
+		this.id = 0;
+		this.subject = "";
+		this.title = "";
+		this.text = "";
+		this.date = new Date(System.currentTimeMillis());
+		
+	}
+	
 	public Note(int id, String subject, String title, String text) {
 		
 		this.id = id;

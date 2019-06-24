@@ -8,7 +8,9 @@ import ch.bbw.Assess.Models.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.scene.web.HTMLEditor;
 
 public class NoteController {
@@ -21,13 +23,16 @@ public class NoteController {
 
 	@FXML
 	private TextField titleText;
-
+	
 	private DashboardController parentController;
+	
+	Note note;
 	
 	List<Note> notes = new ArrayList<>();
 
-	void initialize(DashboardController parentController) {
+	void initialize(DashboardController parentController, Note note) {
 		this.parentController = parentController;
+		this.note = note;
 	}
 
 	public void saveNote(ActionEvent event) {
