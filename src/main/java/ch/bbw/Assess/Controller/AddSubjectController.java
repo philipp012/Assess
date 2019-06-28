@@ -24,6 +24,7 @@ public class AddSubjectController {
                         newSubject.setName(tfSubjectName.getText().trim());
                         parentController.addSubject(newSubject);
                         ((Node) (event.getSource())).getScene().getWindow().hide();
+                        break;
                     }
                 } else {
                     Alert alert = new Alert(Alert.AlertType.ERROR);

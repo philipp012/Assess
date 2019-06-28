@@ -80,7 +80,7 @@ public class DashboardController implements Initializable {
                     Stage subjectOverviewStage = new Stage();
                     subjectOverviewStage.setTitle(subject.getName());
                     subjectOverviewStage.getIcons().add(new Image(Objects.requireNonNull(ClassLoader.getSystemResourceAsStream("Views/img/icon.png"))));
-                    subjectOverviewStage.setResizable(true);
+                    subjectOverviewStage.setResizable(false);
                     subjectOverviewStage.setScene(subjectOverviewScene);
                     subjectOverviewStage.show();
                 } catch (Exception e) {
@@ -95,5 +95,24 @@ public class DashboardController implements Initializable {
         }
         counter++;
 
+
+    }
+
+    public void showGrades() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/fxml/Grades.fxml"));
+            Parent grades = fxmlLoader.load();
+            GradesController gradesController = fxmlLoader.getController();
+            Scene gradesScene = new Scene(grades, 800, 600);
+            Stage gradesStage = new Stage();
+            gradesStage.setTitle("Grades");
+            gradesStage.getIcons().add(new Image(Objects.requireNonNull(ClassLoader.getSystemResourceAsStream("Views/img/icon.png"))));
+            gradesStage.setResizable(false);
+            gradesStage.setScene(gradesScene);
+            gradesController.initialize(this, subjects);
+            gradesStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

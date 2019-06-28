@@ -5,6 +5,15 @@ import java.util.List;
 public class Subject {
     private String name;
     private List<Note> notes;
+    private List<Double> grades;
+
+    public List<Double> getGrades() {
+        return grades;
+    }
+
+    public void setGrades(List<Double> grades) {
+        this.grades = grades;
+    }
 
     public String getName() {
         return name;
