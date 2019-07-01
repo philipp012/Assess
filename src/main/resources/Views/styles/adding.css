@@ -1,0 +1,29 @@
+* {
+    -fx-background-color: #292F53;
+}
+
+#add {
+    -fx-background-color: #66bb6a;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-pref-width: 150px;
+}
+
+#discard {
+    -fx-background-color: #757575;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-pref-width: 150px;
+}
+.text-field {
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+
+
+

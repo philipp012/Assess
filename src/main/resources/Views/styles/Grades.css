@@ -2,3 +2,8 @@
     -fx-text-fill: white;
     -fx-background-color: #292F53;
 }
+
+#lbTitle {
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}

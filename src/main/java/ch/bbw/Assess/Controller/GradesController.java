@@ -7,7 +7,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GradesController {
@@ -28,13 +27,14 @@ public class GradesController {
             TableColumn<Object, Object> tableColumn = new TableColumn<>(subject.getName());
             tableColumn.setCellValueFactory(new PropertyValueFactory<>("grades"));
 
-            //add dummy grade
-            List<Double> dummyGrades = new ArrayList<>();
-
-            dummyGrades.add(4.5);
-            dummyGrades.add(6.0);
-            subject.setGrades(dummyGrades);
-
+            Double average = 0.0;
+            if (!subject.getGrades().equals(null)) {
+                for (Double grade : subject.getGrades()) {
+                    average += grade;
+                }
+                average = average / subject.getGrades().size();
+            }
+            System.out.println(average);
             tableView.getItems().add(subject);
             tableView.getColumns().add(tableColumn);
 

@@ -36,7 +36,7 @@ public class AddSubjectController {
                 }
             }
         } else {
-            if (!tfSubjectName.getText().trim().isEmpty()) {
+            if (!tfSubjectName.getText().trim().isEmpty() && tfSubjectName.getText().length() < 20) {
                 Subject newSubject = new Subject();
                 newSubject.setName(tfSubjectName.getText().trim());
                 parentController.addSubject(newSubject);

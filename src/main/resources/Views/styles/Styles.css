@@ -12,16 +12,7 @@
     -fx-font-size: 25px;
     -fx-text-fill: white;
     -fx-pref-height: 150px;
-    -fx-pref-width: 200px;
-    -fx-background-radius: 10;
-}
-
-#examsBtn {
-    -fx-background-color: #ef5350;
-    -fx-font-size: 25px;
-    -fx-text-fill: white;
-    -fx-pref-height: 150px;
-    -fx-pref-width: 200px;
+    -fx-pref-width: 450px;
     -fx-background-radius: 10;
 }
 

@@ -1,18 +1,15 @@
 package ch.bbw.Assess.Models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Subject {
     private String name;
-    private List<Note> notes;
-    private List<Double> grades;
+    private List<Note> notes = new ArrayList<>();
+    private List<Double> grades = new ArrayList<>();
 
     public List<Double> getGrades() {
         return grades;
-    }
-
-    public void setGrades(List<Double> grades) {
-        this.grades = grades;
     }
 
     public String getName() {
@@ -34,4 +31,13 @@ public class Subject {
 	public void removeNote(Note note) {
 		this.notes.remove(note);
 	}
+
+    public void addGrade(Double grade) {
+        grades.add(grade);
+    }
+
+    @Override
+    public String toString() {
+        return this.name + " grades: " + this.grades;
+    }
 }
