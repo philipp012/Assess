@@ -7,14 +7,6 @@
     -fx-text-fill: white;
 }
 
-#gradesBtn {
-    -fx-background-color: #66bb6a;
-    -fx-font-size: 25px;
-    -fx-text-fill: white;
-    -fx-pref-height: 150px;
-    -fx-pref-width: 450px;
-    -fx-background-radius: 10;
-}
 
 #add {
     -fx-background-color: white;

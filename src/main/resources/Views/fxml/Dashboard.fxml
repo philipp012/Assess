@@ -15,7 +15,6 @@
         <Image url="@../img/assess1.png" />
     </ImageView>
     <Label fx:id="copyRightLabel" layoutX="27.0" layoutY="668.0" prefHeight="17.0" prefWidth="165.0" text="© 2019 Sancacanc / Kiss" />
-    <Button fx:id="gradesBtn" layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#showGrades" text="Grades" />
     <Button fx:id="add" layoutX="637.0" layoutY="630.0" mnemonicParsing="false" onAction="#loadSubjectDialogue" text="+" />
     <ScrollPane fx:id="scrollPane" layoutX="123.0" layoutY="316.0" prefHeight="269.0" prefWidth="506.0">
         <GridPane fx:id="gridPane" prefHeight="271.0" prefWidth="533.0">
