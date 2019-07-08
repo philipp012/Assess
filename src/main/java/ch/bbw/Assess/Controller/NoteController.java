@@ -30,18 +30,30 @@ public class NoteController {
 	
 	private SubjectOverviewController subjectOverviewController;
 	
+	private boolean edit;
+	
 	List<Note> notes;
 
-	void initialize(SubjectOverviewController subjectOverviewController, DashboardController parentController, Note note, List<Note> notes) {
+	void initialize(SubjectOverviewController subjectOverviewController, DashboardController parentController, Note note, List<Note> notes, boolean edit) {
 		this.parentController = parentController;
 		this.note = note;
 		this.subjectOverviewController = subjectOverviewController;
 		this.notes = notes;
+		this.edit = edit;
+		
+		
+		if(edit) {
+			htmlEditor.setHtmlText(note.getText());
+			titleText.setText(note.getTitle());
+			subjectText.setText(note.getSubject());
+			
+			notes.remove(note);
+		}
 	}
 
 	public void saveNote(ActionEvent event) {
 				
-		if (!htmlEditor.getHtmlText().trim().isEmpty() && !subjectText.getText().trim().isEmpty()
+		if (!subjectText.getText().trim().isEmpty()
 				&& !titleText.getText().trim().isEmpty()) {
 			
 			note = new Note(notes.size() + 1, subjectText.getText(), titleText.getText(), htmlEditor.getHtmlText());
@@ -51,8 +63,9 @@ public class NoteController {
 					subject.addNote(note);
 				}
 			}
-			notes.add(note);
+					
 			
+			notes.add(note);
 			subjectOverviewController.addNote(note);
 
 			((Node) (event.getSource())).getScene().getWindow().hide();

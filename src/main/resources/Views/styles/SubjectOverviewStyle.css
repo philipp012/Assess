@@ -7,6 +7,8 @@
     -fx-text-fill: white;
     -fx-font-size: 15;
     -fx-pref-width: 150px;
+    
+    
 }
 
 .label {
@@ -23,3 +25,6 @@
 .list-cell {
     -fx-text-fill: white;
 }
+#btDelete {
+	-fx-background-color: #ff6633;
+	}
