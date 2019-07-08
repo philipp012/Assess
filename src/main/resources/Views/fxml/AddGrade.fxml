@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="450.0" stylesheets="@../styles/adding.css" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbw.Assess.Controller.AddGradeController">
+    <ImageView fitHeight="61.0" fitWidth="121.0" layoutX="14.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../img/assess1.png" />
+    </ImageView>
+    <Button fx:id="add" layoutX="265.0" layoutY="327.0" mnemonicParsing="false" onAction="#confirmAddSubject" text="Add" />
+    <Button fx:id="discard" layoutX="60.0" layoutY="327.0" mnemonicParsing="false" onAction="#discard" text="Discard" />
+    <TextField fx:id="tfGrade" layoutX="127.0" layoutY="182.0" prefHeight="26.0" prefWidth="197.0" promptText="Mark" />
+    <Label fx:id="lbTitle" layoutX="157.0" layoutY="28.0" text="Add Grade" />
+</AnchorPane>

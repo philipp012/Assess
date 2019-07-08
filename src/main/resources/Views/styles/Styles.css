@@ -1,0 +1,27 @@
+
+* {
+    -fx-background-color: #292F53;
+}
+
+#copyRightLabel {
+    -fx-text-fill: white;
+}
+
+
+#add {
+    -fx-background-color: white;
+    -fx-text-fill: #66bb6a;
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-max-height: 10px;
+    -fx-max-width: 10px;
+}
+
+.button {
+    -fx-background-color: #1e88e5;
+    -fx-font-size: 25px;
+    -fx-text-fill: white;
+    -fx-pref-height: 150px;
+    -fx-pref-width: 200px;
+    -fx-background-radius: 10;
+}

@@ -1,0 +1,30 @@
+* {
+    -fx-background-color: #292F53;
+}
+
+.button {
+    -fx-background-color: #66bb6a;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-pref-width: 150px;
+    
+    
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+
+.list-view {
+    -fx-text-fill: white;
+    -fx-color-label-visible: white;
+    -fx-font-size: 20;
+}
+
+.list-cell {
+    -fx-text-fill: white;
+}
+#btDelete {
+	-fx-background-color: #ff6633;
+	}

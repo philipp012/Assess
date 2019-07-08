@@ -1,9 +1,8 @@
-# intellij
-/target
-.idea
+# Intellij
+/.idea
 *.iml
+/target
 
 # Eclipse
 .classpath
 .project
-.settings

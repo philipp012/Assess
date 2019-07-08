@@ -1,0 +1,17 @@
+.anchor {
+    -fx-background-color: #292F53;
+}
+
+#save {
+    -fx-background-color: #66bb6a;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-pref-width: 150px;
+}
+
+#cancel {
+    -fx-background-color: #757575;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-pref-width: 150px;
+}
